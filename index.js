@@ -4,3 +4,4 @@ console.log("Bienvenido a GitHub Actions");
 console.log("Estudiante: Josairy");
 console.log("Materia: Electiva 2");
 console.log("Fecha: Octubre 2025");
+console.log("¡GitHub Actions funciona!");

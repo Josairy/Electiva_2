@@ -1,0 +1,25 @@
+name: Notificación a ntfy.sh
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notificar:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+      
+      - name: Ejecutar programa Hola Mundo
+        run: node index.js
+      
+      - name: Enviar notificación a ntfy.sh
+        run: |
+          curl -H "Title: GitHub Actions - Electiva 2" \
+               -H "Priority: default" \
+               -H "Tags: rocket,white_check_mark" \
+               -d "✅ Nuevo commit en el repositorio Electiva_2 por Josairy. El código se ejecutó correctamente!" \
+               https://ntfy.sh/devops-itla
